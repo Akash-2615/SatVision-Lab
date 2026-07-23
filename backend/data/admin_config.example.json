@@ -1,0 +1,4 @@
+{
+  "password": "admin123",
+  "note": "Change this password. Or set ADMIN_PASSWORD env var."
+}

@@ -1,0 +1,28 @@
+{
+  "small_objects": {
+    "aircraft": {
+      "train": 180,
+      "test": 40
+    },
+    "building": {
+      "train": 180,
+      "test": 40
+    },
+    "ship": {
+      "train": 180,
+      "test": 40
+    },
+    "vehicle": {
+      "train": 180,
+      "test": 40
+    }
+  },
+  "satellite": {
+    "train": 1200,
+    "test": 240
+  },
+  "sources": {
+    "small_objects": "NWPU VHR-10 (torchgeo HF mirror + COCO annotations)",
+    "satellite": "EuroSAT RGB via torchvision (Sentinel-2)"
+  }
+}

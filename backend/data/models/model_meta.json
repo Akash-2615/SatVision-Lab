@@ -1,0 +1,236 @@
+{
+  "classes": [
+    "aircraft",
+    "building",
+    "ship",
+    "vehicle"
+  ],
+  "labels": [
+    "water_body",
+    "urban_area",
+    "dense_forest",
+    "sparse_vegetation",
+    "agriculture",
+    "barren_land",
+    "desert",
+    "cloud_cover",
+    "flood",
+    "wildfire",
+    "snow_ice",
+    "wetland"
+  ],
+  "threshold": 0.45,
+  "classifier": {
+    "trained": true,
+    "accuracy": 1.0,
+    "best_val_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "per_class": {
+      "aircraft": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 31
+      },
+      "building": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 34
+      },
+      "ship": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 36
+      },
+      "vehicle": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 43
+      }
+    },
+    "loss_curve": [
+      1.100445912943946,
+      0.6670783824390836,
+      0.47451753583219314,
+      0.39435648421446484,
+      0.38758088482750785,
+      0.3834468349814415,
+      0.3481407943699095,
+      0.34707387040058774,
+      0.353428866300318,
+      0.3117397419280476
+    ],
+    "accuracy_curve": [
+      0.8958333333333334,
+      0.9652777777777778,
+      0.9722222222222222,
+      0.9930555555555556,
+      1.0,
+      1.0,
+      1.0,
+      0.9930555555555556,
+      0.9930555555555556,
+      0.9930555555555556
+    ],
+    "confusion_matrix": [
+      [
+        31,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        34,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        36,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        43
+      ]
+    ],
+    "weights_file": "small_object_classifier.pth",
+    "weights_bytes": 41513467,
+    "last_trained": "2026-07-22T21:45:16.227848+00:00",
+    "config": {
+      "epochs": 10,
+      "batch_size": 16,
+      "lr": 8e-05,
+      "weight_decay": 0.0001,
+      "image_size": 128,
+      "val_split": 0.2
+    },
+    "architecture": "EfficientNet-B3 + CBAM + MLP head"
+  },
+  "annotator": {
+    "trained": true,
+    "accuracy": 0.9715277777777778,
+    "exact_match_accuracy": 0.7375,
+    "map": 0.9872418383547797,
+    "hamming_loss": 0.02847222222222222,
+    "f1_per_label": {
+      "water_body": 0.8846153846153846,
+      "urban_area": 0.9615384615384616,
+      "dense_forest": 0.9090909090909091,
+      "sparse_vegetation": 0.8095238095238095,
+      "agriculture": 0.9452054794520548,
+      "barren_land": 0.9009009009009009,
+      "desert": 0.0,
+      "cloud_cover": 0.0,
+      "flood": 0.0,
+      "wildfire": 0.0,
+      "snow_ice": 0.0,
+      "wetland": 0.7536231884057971
+    },
+    "precision_per_label": {
+      "water_body": 0.7931034482758621,
+      "urban_area": 0.9493670886075949,
+      "dense_forest": 0.8333333333333334,
+      "sparse_vegetation": 0.68,
+      "agriculture": 0.9078947368421053,
+      "barren_land": 0.819672131147541,
+      "desert": 0.0,
+      "cloud_cover": 0.0,
+      "flood": 0.0,
+      "wildfire": 0.0,
+      "snow_ice": 0.0,
+      "wetland": 0.6046511627906976
+    },
+    "recall_per_label": {
+      "water_body": 1.0,
+      "urban_area": 0.974025974025974,
+      "dense_forest": 1.0,
+      "sparse_vegetation": 1.0,
+      "agriculture": 0.9857142857142858,
+      "barren_land": 1.0,
+      "desert": 0.0,
+      "cloud_cover": 0.0,
+      "flood": 0.0,
+      "wildfire": 0.0,
+      "snow_ice": 0.0,
+      "wetland": 1.0
+    },
+    "f1_macro": 0.5137081777939431,
+    "precision_macro": 0.46566849174976127,
+    "recall_macro": 0.5799783549783549,
+    "subset_f1": 0.8806425905039025,
+    "subset_precision": 0.7982888429995907,
+    "subset_recall": 0.9942486085343228,
+    "loss_curve": [
+      0.7220088601112366,
+      0.5772514127194881,
+      0.48164447794357934,
+      0.40587680687506994,
+      0.34425602393845717,
+      0.29239690974354743,
+      0.2753706883639097,
+      0.26660481182237467
+    ],
+    "map_curve": [
+      0.8988651730144454,
+      0.964413912498773,
+      0.9531605254215416,
+      0.9714928910478605,
+      0.9796137283318901,
+      0.9866609135513305,
+      0.9872418383547797,
+      0.9870880441466919
+    ],
+    "weights_file": "multilabel_annotator.pth",
+    "weights_bytes": 50477797,
+    "last_trained": "2026-07-22T23:00:49.783616+00:00",
+    "config": {
+      "epochs": 8,
+      "batch_size": 8,
+      "lr": 0.0002,
+      "weight_decay": 0.0001,
+      "image_size": 224,
+      "val_split": 0.2,
+      "threshold": 0.45
+    },
+    "architecture": "EfficientNet-B3 + CBAM + MLP multi-label head"
+  },
+  "updated_at": "2026-07-22T23:00:49.783643+00:00",
+  "dataset": {
+    "small_objects": {
+      "aircraft": {
+        "train": 100,
+        "test": 25
+      },
+      "building": {
+        "train": 100,
+        "test": 25
+      },
+      "ship": {
+        "train": 100,
+        "test": 25
+      },
+      "vehicle": {
+        "train": 100,
+        "test": 25
+      }
+    },
+    "satellite": {
+      "train": 500,
+      "test": 120
+    },
+    "sources": {
+      "small_objects": "NWPU VHR-10 (torchgeo HF mirror + COCO annotations)",
+      "satellite": "EuroSAT RGB via torchvision (Sentinel-2)"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg0: #071018;
+  --bg1: #0c1a24;
+  --panel: #132533;
+  --line: rgba(201, 166, 107, 0.22);
+  --text: #e8eef2;
+  --muted: #8aa0ad;
+  --accent: #4a90a4;
+  --moss: #2d6a4f;
+  --ember: #c45c26;
+  --sand: #c9a66b;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(74, 144, 164, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(45, 106, 79, 0.16), transparent 50%),
+    linear-gradient(165deg, #071018 0%, #0c1a24 45%, #101f2c 100%);
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 160, 173, 0.35);
+  border-radius: 999px;
+}
+
+@layer utilities {
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-md;
+  }
+  .glass-card-gold {
+    @apply rounded-2xl border border-sand/35 bg-gradient-to-br from-sand/15 via-white/[0.04] to-transparent shadow-[0_8px_40px_rgba(201,166,107,0.12)] backdrop-blur-md;
+  }
+  .glass-card-moss {
+    @apply rounded-2xl border border-moss/35 bg-gradient-to-br from-moss/15 via-white/[0.04] to-transparent shadow-[0_8px_40px_rgba(45,106,79,0.15)] backdrop-blur-md;
+  }
+}
+
+@keyframes ring-fill {
+  from {
+    stroke-dashoffset: var(--ring-circ);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-fade-up {
+  animation: fade-up 0.45s ease-out both;
+}
+.anim-ring {
+  animation: ring-fill 0.9s ease-out forwards;
+}
